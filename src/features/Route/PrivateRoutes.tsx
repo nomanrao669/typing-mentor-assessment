@@ -7,7 +7,9 @@ const PrivateRoutes = () => {
 
   useEffect(() => {
     if (authenticated === 'false' || authenticated === null) {
-      return navigate(`${process.env.PUBLIC_URL}/login`)
+      // commenting this line to prevent the login redirections
+      // it is a lazy approach, if I llok for a permanent solution, I'll remove this PrivateRoutes and pass routes directly
+      // return navigate(`${process.env.PUBLIC_URL}/login`)
     }
   })
   return <>{<Outlet />}</>
